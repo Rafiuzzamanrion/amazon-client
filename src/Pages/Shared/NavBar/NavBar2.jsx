@@ -6,10 +6,8 @@ import { AuthContext } from "../../../Providers/AuthProviders";
 import ic from '/ic.png'
 
 
-
-
-const NavBar = () => {
-  const { user } = useContext(AuthContext);
+const NavBar2 = () => {
+    const { user } = useContext(AuthContext);
 
   return (
     <div>
@@ -78,12 +76,6 @@ const NavBar = () => {
            
             </ul>
           </nav>
-          <label
-            htmlFor="my-drawer"
-            className="btn btn-ghost drawer-button hover:scale-110 hover:ease-in hover:duration-150 hover:bg-transparent uppercase lg:hidden"
-          >
-            All Categories
-          </label>
           {/* ======== button ========= */}
           {user ? (
             <div className="lg:hidden">
@@ -102,13 +94,6 @@ const NavBar = () => {
           )}
           
           <nav className="hidden lg:flex justify-center items-center font-semibold  text-sm">
-          <label
-            htmlFor="my-drawer"
-            className="btn btn-ghost drawer-button hover:scale-110 hover:ease-in hover:duration-150 hover:bg-transparent uppercase mr-8"
-          >
-            <GiHamburgerMenu />
-            All Categories
-          </label>
             <Link
               className="mr-8 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
               to={"/"}
@@ -161,4 +146,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBar2;

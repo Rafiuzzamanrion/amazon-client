@@ -16,6 +16,7 @@ import Bottles from "../Pages/Categories/Bottles/Bottles";
 import Login from "../Pages/Home-Layout/Login/Login";
 import SignUp from "../Pages/Home-Layout/SignUp/SignUp";
 import Description from "../Pages/Description/Description";
+import Forgot from "../Pages/Home-Layout/Login/Forgot";
 
 
 
@@ -37,6 +38,10 @@ import Description from "../Pages/Description/Description";
         {
           path:'signUp',
           element:<SignUp></SignUp>
+        },
+        {
+          path:'forgot',
+          element:<Forgot></Forgot>
         }
 
 
