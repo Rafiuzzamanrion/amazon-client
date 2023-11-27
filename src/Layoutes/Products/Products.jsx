@@ -52,24 +52,6 @@ const Products = () => {
             <li>
               <Link></Link>
             </li>
-            <li>
-              <Link></Link>
-            </li>
-            <li>
-              <Link></Link>
-            </li>
-            <li>
-              <Link></Link>
-            </li>
-            <li>
-              <Link></Link>
-            </li>
-            <li>
-              <Link></Link>
-            </li>
-            <li>
-              <Link></Link>
-            </li>
           </ul>
         </div>
       </div>

@@ -4,12 +4,28 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
 import ic from '/ic.png'
+import Swal from "sweetalert2";
 
 
 
 
 const NavBar = () => {
-  const { user } = useContext(AuthContext);
+  const { user,logOutUser } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOutUser()
+    .then(()=>{
+      Swal.fire({
+        position: "top",
+        icon: "success",
+        title: "You have successfully logged out",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
 
   return (
     <div>
@@ -87,7 +103,7 @@ const NavBar = () => {
           {/* ======== button ========= */}
           {user ? (
             <div className="lg:hidden">
-              <button className="btn uppercase border-2 bg-transparent text-orange-400 border-orange-400 hover:bg-orange-400 hover:border-orange-400 hover:text-black hover:scale-110 hover:ease-in hover:duration-150">
+              <button onClick={handleLogOut} className="btn uppercase border-2 bg-transparent text-orange-400 border-orange-400 hover:bg-orange-400 hover:border-orange-400 hover:text-black hover:scale-110 hover:ease-in hover:duration-150">
                 Logout
               </button>
             </div>
@@ -141,7 +157,7 @@ const NavBar = () => {
             </Link>
             {user ? (
               <div className="flex justify-center  items-center">
-                <button className="btn uppercase bg-transparent text-orange-400 border-orange-400 border-2 hover:bg-orange-400 hover:border-orange-400 hover:text-black hover:scale-110 hover:ease-in hover:duration-150">
+                <button onClick={handleLogOut} className="btn uppercase bg-transparent text-orange-400 border-orange-400 border-2 hover:bg-orange-400 hover:border-orange-400 hover:text-black hover:scale-110 hover:ease-in hover:duration-150">
                   logout
                 </button>
               </div>

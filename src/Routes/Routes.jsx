@@ -15,8 +15,11 @@ import PremiumPants from "../Pages/Categories/PremiumPants/PremiumPants";
 import Bottles from "../Pages/Categories/Bottles/Bottles";
 import Login from "../Pages/Home-Layout/Login/Login";
 import SignUp from "../Pages/Home-Layout/SignUp/SignUp";
-import Description from "../Pages/Description/Description";
 import Forgot from "../Pages/Home-Layout/Login/Forgot";
+import DescriptionLayOut from "../Layoutes/Description/DescriptionLayOut";
+import Description from "../Pages/Description/Description";
+
+
 
 
 
@@ -81,11 +84,21 @@ import Forgot from "../Pages/Home-Layout/Login/Forgot";
           path:'bottles',
           element:<Bottles></Bottles>
         },
-        {
-          path:'description',
-          element:<Description></Description>
-        }
+      
       ]
+    },
+    {
+      
+       path:'description',
+       element:<DescriptionLayOut></DescriptionLayOut>,
+       children:[
+        {
+          path:':id',
+          element:<Description></Description>,
+          loader:({params})=> fetch(`http://localhost:5000/description/${params.id}`)
+        }
+       ]
+      
     }
   ]);
 
