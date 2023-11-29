@@ -3,12 +3,19 @@ import {useContext} from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import {AuthContext} from "../../Providers/AuthProviders";
+import UseCart from "../../Hooks/UseCart";
+
+
+
+
 
 const Description = () => {
   const product = useLoaderData();
   const { img, name, price, ratingsCount, shipping, seller, category, _id } =
     product;
     const {user} = useContext(AuthContext);
+    const [,refetch] = UseCart();
+  
   const handleAddToCart = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -27,15 +34,16 @@ const Description = () => {
     const subTotal = quantity * price;
     const totalPrice = subTotal + shipping;
   
-    const cartData = {name:name,email:user?.email, price:totalPrice, quantity:quantity, image:img, category:category, brand:seller, shippingCharge:shipping ,productId:_id}
+    const cartData = {name:name,email:user?.email, price:totalPrice, quantity:parseInt(quantity), image:img,color:color,size:size, category:category, brand:seller, shippingCharge:shipping ,productId:_id}
 
     axios.post('http://localhost:5000/cart',cartData)
     .then(res => {
       if(res.data.insertedId){
+        refetch()
         Swal.fire({
           position: "top",
           icon: "success",
-          title: "Your item has been successfully added to cart",
+          title: "Your order has been successfully added to cart",
           showConfirmButton: false,
           timer: 1500,
         })
@@ -43,8 +51,6 @@ const Description = () => {
     })
     .catch(error => console.log(error))
   }; 
-
-  console.log(product);
   return (
     <div className="min-h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

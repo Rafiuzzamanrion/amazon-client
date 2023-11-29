@@ -18,6 +18,7 @@ import SignUp from "../Pages/Home-Layout/SignUp/SignUp";
 import Forgot from "../Pages/Home-Layout/Login/Forgot";
 import DescriptionLayOut from "../Layoutes/Description/DescriptionLayOut";
 import Description from "../Pages/Description/Description";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 
@@ -94,7 +95,7 @@ import Description from "../Pages/Description/Description";
        children:[
         {
           path:':id',
-          element:<Description></Description>,
+          element:<PrivateRoutes><Description></Description></PrivateRoutes>,
           loader:({params})=> fetch(`http://localhost:5000/description/${params.id}`)
         }
        ]

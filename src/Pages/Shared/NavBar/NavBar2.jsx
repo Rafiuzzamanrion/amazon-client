@@ -5,10 +5,14 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
 import ic from '/ic.png'
 import Swal from "sweetalert2";
+import UseCart from "../../../Hooks/UseCart";
 
 
 const NavBar2 = () => {
-    const { user,logOutUser } = useContext(AuthContext);
+  const { user,logOutUser } = useContext(AuthContext);
+  const [carts] = UseCart();
+  const cart = carts.map( item => item)
+  const orderQuantity = cart.reduce((sum,item)=> item.quantity + sum,0)
     const handleLogOut = () => {
         logOutUser()
         .then(()=>{
@@ -37,7 +41,7 @@ const NavBar2 = () => {
             orders
           </Link>
           <Link className="text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 uppercase font-semibold flex flex-col">
-         <span className="text-sm text-orange-400 translate-y-2 translate-x-4">00</span>
+         <span className="text-sm text-orange-400 translate-y-2 translate-x-4">{orderQuantity < 10? '0':'' }{orderQuantity}</span>
          <img src={ic} className="w-12 h-8 -translate-y-3" alt="" />
           </Link>
           <Link className="text-orange-400 mr-5 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 font-semibold text-sm">
