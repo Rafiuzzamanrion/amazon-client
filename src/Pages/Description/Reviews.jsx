@@ -11,7 +11,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 const Reviews = () => {
-  const { data: reviews = [] } = useQuery({
+  const { data: reviews = [],refetch } = useQuery({
     queryKey: ["reviews"],
     queryFn: async () => {
       const res = await axios.get("http://localhost:5000/reviews");
@@ -40,6 +40,7 @@ const Reviews = () => {
       axios.post('http://localhost:5000/addReview',reviewData)
       .then(res => {
         if(res.data.insertedId){
+          refetch();
             Swal.fire({
                 position: "top",
                 icon: "success",

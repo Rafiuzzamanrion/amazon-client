@@ -19,6 +19,7 @@ import Forgot from "../Pages/Home-Layout/Login/Forgot";
 import DescriptionLayOut from "../Layoutes/Description/DescriptionLayOut";
 import Description from "../Pages/Description/Description";
 import PrivateRoutes from "./PrivateRoutes";
+import Cart from "../Pages/Home-Layout/Cart/Cart";
 
 
 
@@ -46,6 +47,10 @@ import PrivateRoutes from "./PrivateRoutes";
         {
           path:'forgot',
           element:<Forgot></Forgot>
+        },
+        {
+          path:'cart',
+          element:<Cart></Cart>
         }
 
 
