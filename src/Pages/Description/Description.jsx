@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import {AuthContext} from "../../Providers/AuthProviders";
 import UseCart from "../../Hooks/UseCart";
+import {Helmet} from "react-helmet-async";
 
 
 
@@ -53,6 +54,9 @@ const Description = () => {
   }; 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Amazon | Description</title>
+      </Helmet>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
           <img className="object-cover lg:h-5/6 w-full" src={img} alt="" />
