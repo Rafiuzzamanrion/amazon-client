@@ -36,7 +36,7 @@ const CartsCard = ({ cart, refetch }) => {
   return (
     <div className="card md:h-80 card-side bg-base-100 shadow-xl border border-orange-400">
       <figure>
-        <img className="w-64 md:w-96 object-cover" src={image} alt="Movie" />
+        <img className="w-64 md:w-96 object-cover  hover:scale-110 hover:ease-in hover:duration-150" src={image} alt="Movie" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>

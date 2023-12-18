@@ -10,6 +10,8 @@ import { FaUser } from "react-icons/fa6";
 import { GiShoppingCart } from "react-icons/gi";
 import { ImProfile } from "react-icons/im";
 import { FaHistory } from "react-icons/fa";
+import UseAdmin from "../../../Hooks/UseAdmin";
+import { MdAdminPanelSettings } from "react-icons/md";
 
 const NavBar2 = () => {
   const { user, logOutUser } = useContext(AuthContext);
@@ -31,6 +33,8 @@ const NavBar2 = () => {
         console.log(error);
       });
   };
+
+  const [admin] = UseAdmin();
 
   return (
     <div>
@@ -56,21 +60,32 @@ const NavBar2 = () => {
               >
                 <h1 className="border-b-2 border-orange-300">Dashboard</h1>
 
-                <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-3 mt-2">
-                  <ImProfile size={15} />
-                  Profile
-                </Link>
+                {admin === true ? (
+                  <div>
+                     <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-2">
+                     <MdAdminPanelSettings size={17} />
+                      Admin Panel
+                    </Link>
+                  </div>
+                ) : (
+                  <div>
+                    <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-3 mt-2">
+                      <ImProfile size={15} />
+                      Profile
+                    </Link>
 
-                <Link
-                  to={"/cart"}
-                  className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1"
-                >
-                  <GiShoppingCart size={18} /> My cart
-                </Link>
+                    <Link
+                      to={"/cart"}
+                      className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1"
+                    >
+                      <GiShoppingCart size={18} /> My cart
+                    </Link>
 
-                <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1">
-                  <FaHistory size={15} /> History
-                </Link>
+                    <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1">
+                      <FaHistory size={15} /> History
+                    </Link>
+                  </div>
+                )}
               </ul>
             </div>
           ) : (
@@ -136,9 +151,9 @@ const NavBar2 = () => {
               </Link>
               <Link
                 className="mt-1 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
-                to={"/projects"}
+                to={"/customerReview"}
               >
-                customer service
+                customer review
               </Link>
               <Link
                 className="mt-1 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
@@ -189,9 +204,9 @@ const NavBar2 = () => {
             </Link>
             <Link
               className="mr-8 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
-              to={"/projects"}
+              to={"/customerReview"}
             >
-              customer service
+              customer review
             </Link>
             <Link
               className="mr-8 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "

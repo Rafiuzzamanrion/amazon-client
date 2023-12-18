@@ -7,8 +7,10 @@ import ic from "/ic.png";
 import Swal from "sweetalert2";
 import UseCart from "../../../Hooks/UseCart";
 import { FaUser } from "react-icons/fa6";
-import {ImProfile} from "react-icons/im";
-import {FaHistory} from "react-icons/fa";
+import { ImProfile } from "react-icons/im";
+import { FaHistory } from "react-icons/fa";
+import UseAdmin from "../../../Hooks/UseAdmin";
+import {MdAdminPanelSettings} from "react-icons/md";
 
 const NavBar = () => {
   const { user, logOutUser } = useContext(AuthContext);
@@ -31,7 +33,12 @@ const NavBar = () => {
         console.log(error);
       });
   };
-
+   const [admin] = UseAdmin();
+  //  if(admin === true){
+  //   console.log('admin')
+  //  }
+  //  else console.log('not admin')
+  // console.log(admin)
   return (
     <div>
       <div className="flex justify-between bg-black p-3">
@@ -41,8 +48,7 @@ const NavBar = () => {
           </Link>
         </nav>
         <nav className="flex justify-center items-center">
-       
-        {user?  
+          {user ? (
             <div className="dropdown dropdown-bottom">
               <div
                 tabIndex={0}
@@ -57,30 +63,56 @@ const NavBar = () => {
               >
                 <h1 className="border-b-2 border-orange-300">Dashboard</h1>
 
-          
-                <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-3 mt-2"><ImProfile size={15} />Profile</Link>
-                
-                <Link to={'/cart'} className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1"><GiShoppingCart size={18}/> My cart</Link>
-                
-                <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1"><FaHistory size={15} /> History</Link>
-                
+                {admin === true ? (
+                  <div>
+     <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-2">
+                     <MdAdminPanelSettings size={17} />
+                      Admin Panel
+                    </Link>
+                  </div>
+                ) : (
+                  <div>
+                    <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-3 mt-2">
+                      <ImProfile size={15} />
+                      Profile
+                    </Link>
+
+                    <Link
+                      to={"/cart"}
+                      className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1"
+                    >
+                      <GiShoppingCart size={18} /> My cart
+                    </Link>
+
+                    <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1">
+                      <FaHistory size={15} /> History
+                    </Link>
+                  </div>
+                )}
               </ul>
             </div>
-            : <Link to={'/login'}>
-            <h1 className="text-orange-400 mr-5 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 font-semibold text-sm">Hi, Login please</h1>
+          ) : (
+            <Link to={"/login"}>
+              <h1 className="text-orange-400 mr-5 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 font-semibold text-sm">
+                Hi, Login please
+              </h1>
             </Link>
+          )}
 
-          }
-
-
-          <Link  to={'/cart'} className="text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 uppercase font-semibold flex flex-col">
+          <Link
+            to={"/cart"}
+            className="text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 uppercase font-semibold flex flex-col"
+          >
             <span className="text-sm text-orange-400 translate-y-2 translate-x-4">
               {orderQuantity < 10 && 0}
               {orderQuantity}
             </span>
             <img src={ic} className="w-12 h-8 -translate-y-3" alt="" />
           </Link>
-          <Link to={'/cart'} className="text-orange-400 mr-5 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 font-semibold text-sm">
+          <Link
+            to={"/cart"}
+            className="text-orange-400 mr-5 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 font-semibold text-sm"
+          >
             Cart
           </Link>
         </nav>
@@ -123,9 +155,9 @@ const NavBar = () => {
               </Link>
               <Link
                 className="mt-1 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
-                to={"/projects"}
+                to={"/customerReview"}
               >
-                customer service
+                customer review
               </Link>
               <Link
                 className="mt-1 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
@@ -189,9 +221,9 @@ const NavBar = () => {
             </Link>
             <Link
               className="mr-8 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
-              to={"/projects"}
+              to={"/customerReview"}
             >
-              customer service
+              customer review
             </Link>
             <Link
               className="mr-8 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "

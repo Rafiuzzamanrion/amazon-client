@@ -20,6 +20,7 @@ import DescriptionLayOut from "../Layoutes/Description/DescriptionLayOut";
 import Description from "../Pages/Description/Description";
 import PrivateRoutes from "./PrivateRoutes";
 import Cart from "../Pages/Home-Layout/Cart/Cart";
+import Reviews from "../Pages/Description/Reviews";
 
 
 
@@ -50,8 +51,13 @@ import Cart from "../Pages/Home-Layout/Cart/Cart";
         },
         {
           path:'cart',
-          element:<Cart></Cart>
+          element:<PrivateRoutes><Cart></Cart></PrivateRoutes>
+        },
+        {
+          path:'customerReview',
+          element:<Reviews></Reviews>
         }
+      
 
 
 
@@ -90,7 +96,7 @@ import Cart from "../Pages/Home-Layout/Cart/Cart";
           path:'bottles',
           element:<Bottles></Bottles>
         },
-      
+       
       ]
     },
     {
