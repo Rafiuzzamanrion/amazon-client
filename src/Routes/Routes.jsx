@@ -21,6 +21,9 @@ import Description from "../Pages/Description/Description";
 import PrivateRoutes from "./PrivateRoutes";
 import Cart from "../Pages/Home-Layout/Cart/Cart";
 import Reviews from "../Pages/Description/Reviews";
+import AdminLayout from "../Layoutes/AdminLayout/AdminLayout";
+import AdminRoutes from "./AdminRoutes";
+import AdminHome from "../Pages/AdminPages/AdminHome/AdminHome";
 
 
 
@@ -111,6 +114,16 @@ import Reviews from "../Pages/Description/Reviews";
         }
        ]
       
+    },
+    {
+      path:'admin',
+      element:<AdminRoutes><AdminLayout></AdminLayout></AdminRoutes>,
+      children:[
+        {
+          path:'adminHome',
+          element:<AdminRoutes><AdminHome></AdminHome></AdminRoutes>
+        }
+      ]
     }
   ]);
 

@@ -65,7 +65,7 @@ const NavBar = () => {
 
                 {admin === true ? (
                   <div>
-     <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-2">
+     <Link to={'/admin/adminHome'} className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-2">
                      <MdAdminPanelSettings size={17} />
                       Admin Panel
                     </Link>
