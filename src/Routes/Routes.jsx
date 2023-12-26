@@ -24,6 +24,7 @@ import Reviews from "../Pages/Description/Reviews";
 import AdminLayout from "../Layoutes/AdminLayout/AdminLayout";
 import AdminRoutes from "./AdminRoutes";
 import AdminHome from "../Pages/AdminPages/AdminHome/AdminHome";
+import ManageCustomers from "../Pages/AdminPages/ManageCustomers/ManageCustomers";
 
 
 
@@ -122,6 +123,10 @@ import AdminHome from "../Pages/AdminPages/AdminHome/AdminHome";
         {
           path:'adminHome',
           element:<AdminRoutes><AdminHome></AdminHome></AdminRoutes>
+        },
+        {
+          path:'manageCustomers',
+          element:<ManageCustomers></ManageCustomers>
         }
       ]
     }

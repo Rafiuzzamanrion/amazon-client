@@ -8,7 +8,7 @@ import {useNavigate} from 'react-router-dom';
 
 const SocialLogin = () => {
  const {googleLogIn} = useContext(AuthContext);
- const navigate = useNavigate()
+ const navigate = useNavigate();
  const handleGoogleLogIn = () => {
     googleLogIn()
     .then(result => {
@@ -21,11 +21,21 @@ const SocialLogin = () => {
               Swal.fire({
                 position: "top",
                 icon: "success",
-                title: "You have successfully Logged in/created an account",
+                title: "You have successfully created an account",
                 showConfirmButton: false,
                 timer: 1500,
               });
               navigate("/");
+            }
+            else{
+              Swal.fire({
+                position: "top",
+                icon: "success",
+                title: "You have successfully Logged in here",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              navigate('/');
             }
           });
         })

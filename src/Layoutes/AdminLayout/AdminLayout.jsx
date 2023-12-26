@@ -49,7 +49,7 @@ const AdminLayout = () => {
              <Link className="hover:scale-110 hover:ease-in hover:duration-150" ><MdOutlineLibraryBooks size={20}/> Manage Bookings</Link>
             </li>
             <li>
-             <Link className="hover:scale-110 hover:ease-in hover:duration-150" ><IoIosContacts size={20}/> Manage Customers</Link>
+             <Link to={'/admin/manageCustomers'} className="hover:scale-110 hover:ease-in hover:duration-150" ><IoIosContacts size={20}/> Manage Customers</Link>
             </li>
             <div className="divider"></div>
            <h1 className="flex gap-2">Back To <MdOutlineSubdirectoryArrowRight size={22} /></h1>

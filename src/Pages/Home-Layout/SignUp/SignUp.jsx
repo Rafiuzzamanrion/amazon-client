@@ -63,7 +63,7 @@ const SignUp = () => {
             console.log(error);
           });
         //    ================ post user details to database =============
-        const saveUser = { name: name, email: email };
+        const saveUser = { name: name, email: email};
         axios.post("http://localhost:5000/users", saveUser).then((data) => {
           if (data.data.insertedId) {
             Swal.fire({
