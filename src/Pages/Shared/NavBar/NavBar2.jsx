@@ -81,7 +81,7 @@ const NavBar2 = () => {
                       <GiShoppingCart size={18} /> My cart
                     </Link>
 
-                    <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1">
+                    <Link to={'/customerPayment'} className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1">
                       <FaHistory size={15} /> History
                     </Link>
                   </div>
@@ -143,12 +143,7 @@ const NavBar2 = () => {
               >
                 shop now
               </Link>
-              <Link
-                className="mt-1 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
-                to={"/skills"}
-              >
-                About us
-              </Link>
+             
               <Link
                 className="mt-1 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
                 to={"/customerReview"}

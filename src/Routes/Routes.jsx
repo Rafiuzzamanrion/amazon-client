@@ -25,6 +25,12 @@ import AdminLayout from "../Layoutes/AdminLayout/AdminLayout";
 import AdminRoutes from "./AdminRoutes";
 import AdminHome from "../Pages/AdminPages/AdminHome/AdminHome";
 import ManageCustomers from "../Pages/AdminPages/ManageCustomers/ManageCustomers";
+import AddProduct from "../Pages/AdminPages/AddProduct/AddProduct";
+import ManageProduct from "../Pages/AdminPages/ManageProducts/ManageProduct";
+import ProceedToCheckout from "../Pages/Payments/ProceedToCheckout/ProceedToCheckout";
+import PaymentSuccess from "../Pages/PaymentSuccess/PaymentSuccess";
+import PaymentFailed from "../Pages/Payments/PaymentFailed/PaymentFailed";
+import CustomerPayment from "../Pages/Payments/CustomerPayment/CustomerPayment";
 
 
 
@@ -60,6 +66,22 @@ import ManageCustomers from "../Pages/AdminPages/ManageCustomers/ManageCustomers
         {
           path:'customerReview',
           element:<Reviews></Reviews>
+        },
+        {
+          path:'proceedToCheckout',
+          element:<ProceedToCheckout></ProceedToCheckout>
+        },
+        {
+          path:'payment/success/:tranId',
+          element:<PaymentSuccess></PaymentSuccess>
+        },
+        {
+          path:'payment/failed/:tranId',
+          element:<PaymentFailed></PaymentFailed>
+        },
+        {
+          path:'customerPayment',
+          element:<CustomerPayment></CustomerPayment>
         }
       
 
@@ -127,6 +149,14 @@ import ManageCustomers from "../Pages/AdminPages/ManageCustomers/ManageCustomers
         {
           path:'manageCustomers',
           element:<ManageCustomers></ManageCustomers>
+        },
+        {
+          path:'addProduct',
+          element:<AdminRoutes><AddProduct></AddProduct></AdminRoutes>
+        },
+        {
+          path:'manageProduct',
+          element:<AdminRoutes><ManageProduct></ManageProduct></AdminRoutes>
         }
       ]
     }

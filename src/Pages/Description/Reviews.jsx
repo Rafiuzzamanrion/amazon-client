@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
-import "@smastrom/react-rating/style.css";
 import "swiper/css/autoplay";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";

@@ -40,10 +40,10 @@ const AdminLayout = () => {
              <Link className="hover:scale-110 hover:ease-in hover:duration-150"  to={'/admin/adminHome'}><FaHome size={20}/> Admin Home</Link>
             </li>
             <li>
-             <Link className="hover:scale-110 hover:ease-in hover:duration-150" ><TbShirtOff size={20}/> Manage Products</Link>
+             <Link to={'/admin/manageProduct'} className="hover:scale-110 hover:ease-in hover:duration-150" ><TbShirtOff size={20}/> Manage Products</Link>
             </li>
             <li>
-             <Link className="hover:scale-110 hover:ease-in hover:duration-150" ><FaShirt size={20}/> Add Product</Link>
+             <Link to={'/admin/addProduct'} className="hover:scale-110 hover:ease-in hover:duration-150" ><FaShirt size={20}/> Add Product</Link>
             </li>
             <li>
              <Link className="hover:scale-110 hover:ease-in hover:duration-150" ><MdOutlineLibraryBooks size={20}/> Manage Bookings</Link>

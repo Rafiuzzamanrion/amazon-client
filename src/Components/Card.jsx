@@ -20,9 +20,9 @@ const Card = ({item}) => {
     return (
         <div>
           
-            <div className="card w-96 bg-base-100 shadow-xl border border-orange-400">
+            <div className="card w-96 h-[570px] bg-base-100 shadow-xl border border-orange-400">
   <figure className="px-5 pt-5">
-    <img src={img} alt="Shoes" className="rounded-xl object-cover hover:scale-110 hover:ease-in hover:duration-200" />
+    <img src={img} alt="Shoes" className="rounded-xl object-cover h-full hover:scale-110 hover:ease-in hover:duration-200" />
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title">{name}</h2>

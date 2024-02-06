@@ -147,12 +147,7 @@ const NavBar = () => {
               >
                 shop now
               </Link>
-              <Link
-                className="mt-1 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
-                to={"/skills"}
-              >
-                About us
-              </Link>
+            
               <Link
                 className="mt-1 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
                 to={"/customerReview"}
