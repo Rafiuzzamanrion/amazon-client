@@ -208,12 +208,7 @@ const NavBar = () => {
             >
               shop now
             </Link>
-            <Link
-              className="mr-8 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
-              to={"/skills"}
-            >
-              about us
-            </Link>
+            
             <Link
               className="mr-8 text-orange-400 hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 "
               to={"/customerReview"}

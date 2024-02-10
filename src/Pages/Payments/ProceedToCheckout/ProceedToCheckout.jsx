@@ -22,7 +22,7 @@ const ProceedToCheckout = () => {
     const postcode = form.postcode.value;
     const currency = form.currency.value;
 
-    const formData = {name:user.displayName, email:user.email, address:address, number:number, postcode:postcode, currency:currency, amount:grandTotal,time:Date()}
+    const formData = {name:user.displayName, email:user.email, address:address, number:number, postcode:postcode, currency:currency, amount:grandTotal,quantity:carts.reduce((sum,item)=> item.quantity + sum,0), time:Date()}
 
     if(currency === 'Currency'){
         return Swal.fire({

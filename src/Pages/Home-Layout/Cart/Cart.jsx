@@ -9,7 +9,7 @@ const Cart = () => {
     const totalQuantity = carts.reduce((sum,item) => item.quantity + sum,0);
     const subtotal = carts.reduce((sum,item) => item.price + sum,0);
 
-    return (
+    return ( 
         <div className="flex flex-col justify-center items-center">
             <Helmet>
                 <title>Amazon | My cart</title>

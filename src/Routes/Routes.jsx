@@ -31,6 +31,7 @@ import ProceedToCheckout from "../Pages/Payments/ProceedToCheckout/ProceedToChec
 import PaymentSuccess from "../Pages/PaymentSuccess/PaymentSuccess";
 import PaymentFailed from "../Pages/Payments/PaymentFailed/PaymentFailed";
 import CustomerPayment from "../Pages/Payments/CustomerPayment/CustomerPayment";
+import ContactUs from "../Pages/Home-Layout/Contacts/ContactUs";
 
 
 
@@ -82,6 +83,10 @@ import CustomerPayment from "../Pages/Payments/CustomerPayment/CustomerPayment";
         {
           path:'customerPayment',
           element:<CustomerPayment></CustomerPayment>
+        },
+        {
+          path:'contact',
+          element:<ContactUs></ContactUs>
         }
       
 
