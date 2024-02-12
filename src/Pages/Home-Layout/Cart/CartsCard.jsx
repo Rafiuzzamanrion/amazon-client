@@ -34,7 +34,8 @@ const CartsCard = ({ cart, refetch }) => {
 
     }
   return (
-    <div className="card md:h-80 card-side bg-base-100 shadow-xl border border-orange-400">
+    <div className="card md:h-80 card-side bg-base-100 shadow-xl border border-orange-400"data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
       <figure>
         <img className="w-64 md:w-96 object-cover  hover:scale-110 hover:ease-in hover:duration-150" src={image} alt="Movie" />
       </figure>

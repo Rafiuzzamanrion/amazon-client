@@ -63,7 +63,8 @@ const Reviews = () => {
       <h1 className="text-4xl text-black text-center font-semibold my-16">
         Customer <span className="text-orange-400">Review</span>
       </h1>
-      <section>
+      <section data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <Swiper
           navigation={true}
           modules={[Navigation, Autoplay]}
@@ -113,7 +114,8 @@ const Reviews = () => {
 
       <h1 className="text-black text-4xl font-semibold text-center mt-12">Write a <span className="text-orange-400">Review</span></h1>
       <div className="flex justify-center items-center my-12">
-        <form onSubmit={handleAddReview} className="bg-base-100 shadow-xl p-8 border border-orange-300 rounded-md md:w-1/2">
+        <form onSubmit={handleAddReview} className="bg-base-100 shadow-xl p-8 border border-orange-300 rounded-md md:w-1/2"data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
           <div className="grid md:grid-cols-2 gap-5">
           <label className="form-control w-full max-w-xs">
             <div className="label">

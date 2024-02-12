@@ -7,7 +7,7 @@ const ContactUs = () => {
            <Helmet>
             <title> Amazon | Contact us</title>
            </Helmet>
-<div className="container my-24 mx-auto md:px-6">
+<div className="container my-12 mx-auto md:px-6">
 
   <section className="mb-32">
     <div
@@ -16,7 +16,8 @@ const ContactUs = () => {
     <div className="container px-6 md:px-12">
       <div
         className="block rounded-lg bg-[hsla(0,0%,100%,0.7)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
-        <div className="mb-12 grid gap-x-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-12 grid gap-x-6 md:grid-cols-2 lg:grid-cols-4"data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
           <div className="mx-auto mb-12 text-center bg-base-100 shadow-xl p-5 rounded-lg lg:mb-0">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
               stroke="currentColor" className="mx-auto mb-6 h-8 w-8 text-orange-400 dark:text-orange-400-400">
@@ -25,7 +26,8 @@ const ContactUs = () => {
             </svg>
             <h6 className="font-medium">Unites States</h6>
           </div>
-          <div className="mx-auto mb-12 text-center bg-base-100 shadow-xl p-5 rounded-lg lg:mb-0">
+          <div className="mx-auto mb-12 text-center bg-base-100 shadow-xl p-5 rounded-lg lg:mb-0" data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
               stroke="currentColor" className="mx-auto mb-6 h-8 w-8 text-orange-400 dark:text-orange-400-400">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -34,7 +36,8 @@ const ContactUs = () => {
             </svg>
             <h6 className="font-medium">New York, 94126</h6>
           </div>
-          <div className="mx-auto mb-6 text-center bg-base-100 shadow-xl p-5 rounded-lg md:mb-0">
+          <div className="mx-auto mb-6 text-center bg-base-100 shadow-xl p-5 rounded-lg md:mb-0" data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
               stroke="currentColor" className="mx-auto mb-6 h-8 w-8 text-orange-400 dark:text-orange-400-400">
               <path strokeLinecap="round" strokeLinejoin="round"
@@ -42,7 +45,8 @@ const ContactUs = () => {
             </svg>
             <h6 className="font-medium">+ 01 234 567 89</h6>
           </div>
-          <div className="mx-auto text-center bg-base-100 shadow-xl p-5 rounded-lg">
+          <div className="mx-auto text-center bg-base-100 shadow-xl p-5 rounded-lg" data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
               stroke="currentColor" className="mx-auto mb-6 h-8 w-8 text-orange-400 dark:text-orange-400-400">
               <path strokeLinecap="round" strokeLinejoin="round"
@@ -51,7 +55,8 @@ const ContactUs = () => {
             <h6 className="font-medium">Tax ID: 273 384</h6>
           </div>
         </div>
-        <div className="mx-auto max-w-[700px]">
+        <div className="mx-auto max-w-[700px]" data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
           <form>
             <div className="relative mb-6" data-te-input-wrapper-init>
               <input type="text"

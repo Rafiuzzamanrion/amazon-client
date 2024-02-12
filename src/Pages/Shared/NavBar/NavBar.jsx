@@ -84,7 +84,7 @@ const NavBar = () => {
                       <GiShoppingCart size={18} /> My cart
                     </Link>
 
-                    <Link className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1">
+                    <Link to={'/customerPayment'} className="hover:text-orange-500 hover:scale-110 hover:ease-in hover:duration-150 flex items-center justify-center gap-1 mt-1">
                       <FaHistory size={15} /> History
                     </Link>
                   </div>

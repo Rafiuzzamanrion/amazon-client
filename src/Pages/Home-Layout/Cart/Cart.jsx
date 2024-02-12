@@ -16,7 +16,8 @@ const Cart = () => {
             </Helmet>
             <h1 className="text-4xl text-center font-bold">Shopping <span className="text-orange-400">Cart</span></h1>
 
-            <div className="font-semibold p-8 bg-base-100 w-96 rounded-md shadow-xl mt-6 text-center border border-orange-400">
+            <div className="font-semibold p-8 bg-base-100 w-96 rounded-md shadow-xl mt-6 text-center border border-orange-400"data-aos="flip-left"data-aos-easing="linear"
+    data-aos-duration="500">
                 <h1 className="text-xl">Subtotal ({totalQuantity} items) : <span className="text-orange-400 font-semibold">${subtotal}</span></h1>
                <Link to={'/proceedToCheckout'}> <button className="btn bg-orange-400 mt-3 hover:scale-110 hover:duration-150 hover:ease-in hover:bg-orange-500">Proceed to checkout</button></Link>
             </div>

@@ -70,7 +70,7 @@ import ContactUs from "../Pages/Home-Layout/Contacts/ContactUs";
         },
         {
           path:'proceedToCheckout',
-          element:<ProceedToCheckout></ProceedToCheckout>
+          element:<PrivateRoutes><ProceedToCheckout></ProceedToCheckout></PrivateRoutes>
         },
         {
           path:'payment/success/:tranId',
@@ -137,7 +137,7 @@ import ContactUs from "../Pages/Home-Layout/Contacts/ContactUs";
        children:[
         {
           path:':id',
-          element:<Description></Description>,
+          element:<PrivateRoutes><Description></Description></PrivateRoutes>,
           loader:({params})=> fetch(`https://amazon-server-delta.vercel.app/description/${params.id}`)
         }
        ]

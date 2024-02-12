@@ -24,7 +24,7 @@ const CustomerPayment = () => {
                 <Helmet>
                     <title>Amazon | History</title>
                 </Helmet>
-            <div className="overflow-x-auto min-h-screen mt-12" data-aos="zoom-in"
+            <div className="overflow-x-auto min-h-screen mt-12" data-aos="fade-right"
               data-aos-easing="linear"
               data-aos-duration="500">
                 <h1 className="text-4xl font-bold text-center my-5 uppercase">Payment <span className="text-orange-400">history</span></h1>

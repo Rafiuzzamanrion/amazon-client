@@ -26,7 +26,8 @@ const Category = () => {
         </h1>
      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
      <Link to={'/products/mensSneakers'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={sneakersImg} alt="Shoes" className="rounded-xl hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -38,7 +39,8 @@ const Category = () => {
       </div>
       </Link>
       <Link  to={'/products/earphones'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={earphonesImg} alt="" className="rounded-xl hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -50,7 +52,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/mensBoots'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={bootsImg} alt="" className="rounded-xl hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -62,7 +65,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/premiumPants'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={pantsImg} alt="" className="rounded-xl h-48 w-96 hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -74,7 +78,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/premiumCaps'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={capImg} alt="Shoes" className="rounded-xl h-48 w-96 hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -86,7 +91,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/bottles'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={bottleImg} alt="Shoes" className="rounded-xl hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -98,7 +104,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/premiumBags'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={bagImg} alt="Shoes" className="rounded-xl h-48 w-96 hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -110,7 +117,8 @@ const Category = () => {
       </div>
       </Link>
      <Link to={'/products/mensSneakers'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={sneakersImg} alt="Shoes" className="rounded-xl hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -122,7 +130,8 @@ const Category = () => {
       </div>
       </Link>
       <Link  to={'/products/earphones'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={earphonesImg} alt="" className="rounded-xl hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -134,7 +143,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/mensBoots'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={bootsImg} alt="" className="rounded-xl hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -146,7 +156,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/premiumPants'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={pantsImg} alt="" className="rounded-xl h-48 w-96 hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -158,7 +169,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/premiumCaps'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={capImg} alt="Shoes" className="rounded-xl h-48 w-96 hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -170,7 +182,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/bottles'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={bottleImg} alt="Shoes" className="rounded-xl hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -182,7 +195,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/premiumBags'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={bagImg} alt="Shoes" className="rounded-xl h-48 w-96 hover:scale-110 hover:ease-in hover:duration-200 object-cover" />
@@ -194,7 +208,8 @@ const Category = () => {
       </div>
       </Link>
       <Link to={'/products/bottles'}>
-      <div>
+      <div data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="w-96 h-96 bg-base-100 shadow-xl rounded-md border border-orange-400">
           <figure className="px-10 pt-10 h-60">
             <img src={bottleImg} alt="Shoes" className="rounded-xl hover:scale-110 hover:ease-in hover:duration-200 object-cover" />

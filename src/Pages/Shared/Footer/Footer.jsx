@@ -2,7 +2,8 @@
 
 const Footer = () => {
     return (
-        <div className="mt-10">
+        <div className="mt-10"data-aos="fade-right"data-aos-easing="linear"
+        data-aos-duration="500">
             
             <footer className="footer p-10 bg-black text-base-100">
   <nav>

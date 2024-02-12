@@ -77,7 +77,8 @@ const AddProduct = () => {
       <form
         className="border border-warning p-10"
         onSubmit={handleSubmit(onSubmit)}
-      >
+        data-aos="zoom-in"data-aos-easing="linear"
+        data-aos-duration="500">
         <label className="form-control w-full max-w-xs">
           <div className="label">
             <span className="label-text">Product Name</span>

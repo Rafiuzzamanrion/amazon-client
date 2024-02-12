@@ -57,7 +57,8 @@ const UserCard = ({ user, refetch }) => {
   };
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl border border-orange-400">
+      <div className="card w-96 bg-base-100 shadow-xl border border-orange-400"data-aos="zoom-in"data-aos-easing="linear"
+    data-aos-duration="500">
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
           <p>{email}</p>

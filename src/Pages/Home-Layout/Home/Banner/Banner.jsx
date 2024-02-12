@@ -30,7 +30,8 @@ import banner9 from '/banner9.jpg'
 
 const Banner = () => {
     return (
-       <section className="mt-32 lg:mt-4 shadow-xl bg-base-100">
+       <section className="mt-32 lg:mt-4 shadow-xl bg-base-100" data-aos="zoom-in"data-aos-easing="linear"
+       data-aos-duration="500">
         <Swiper
         spaceBetween={30}
         centeredSlides={true}
