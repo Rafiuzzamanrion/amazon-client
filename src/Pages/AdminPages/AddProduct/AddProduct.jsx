@@ -55,7 +55,7 @@ const AddProduct = () => {
               // ============== hosting end ======================
               // ============== post the product to database ===============
               axios
-                .post("http://localhost:5000/product", newItem)
+                .post("https://amazon-server-delta.vercel.app/product", newItem)
                 .then((data) => {
                   if (data.data.insertedId) {
                     reset();

@@ -7,12 +7,12 @@ const AdminHome = () => {
     const {data:payments = []} = useQuery({
         queryKey: ['payments'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/allPayments');
+            const res = await axios.get('https://amazon-server-delta.vercel.app/allPayments');
             return res.data;
         }  
     });
 
-    
+
   const quantity = payments.reduce((sum,item)=> item.quantity + sum, 0 )
   const totalSold = payments.reduce((sum,item)=> item.amount + sum, 0 )
  
@@ -20,7 +20,7 @@ const AdminHome = () => {
     const {data:users = []} = useQuery({
         queryKey: ['allUsers'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/allUsers');
+            const res = await axios.get('https://amazon-server-delta.vercel.app/allUsers');
             return res.data;
         }  
     });
@@ -31,7 +31,7 @@ const AdminHome = () => {
   
   <div className="stat">
     <div className="stat-title">Sold Amount</div>
-    <div className="stat-value">${totalSold}</div>
+    <div className="stat-value">${parseFloat(totalSold).toFixed(2)}</div>
     <div className="stat-desc">Jan 1st - Feb 1st</div>
   </div>
   

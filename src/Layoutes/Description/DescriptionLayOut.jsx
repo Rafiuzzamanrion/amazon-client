@@ -1,6 +1,6 @@
 
 import {Link, Outlet} from "react-router-dom";
-import Reviews from "../../Pages/Description/Reviews";
+
 import Footer from "../../Pages/Shared/Footer/Footer";
 import NavBar from "../../Pages/Shared/NavBar/NavBar";
 
@@ -57,7 +57,7 @@ const DescriptionLayOut = () => {
           </ul>
         </div>
       </div>
-      <Reviews></Reviews>
+     
       <Footer></Footer>
     </div>
       );

@@ -8,12 +8,13 @@ import "swiper/css/autoplay";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Swal from "sweetalert2";
+import {Helmet} from "react-helmet-async";
 
 const Reviews = () => {
   const { data: reviews = [],refetch } = useQuery({
     queryKey: ["reviews"],
     queryFn: async () => {
-      const res = await axios.get("http://localhost:5000/reviews");
+      const res = await axios.get("https://amazon-server-delta.vercel.app/reviews");
       return res.data;
     },
   });
@@ -36,7 +37,7 @@ const Reviews = () => {
 
      const newRating = parseInt(rating.slice(' ')[1]);
      const reviewData = {name:name,rating:newRating,details:description};
-      axios.post('http://localhost:5000/addReview',reviewData)
+      axios.post('https://amazon-server-delta.vercel.app/addReview',reviewData)
       .then(res => {
         if(res.data.insertedId){
           refetch();
@@ -56,6 +57,9 @@ const Reviews = () => {
 
   return (
     <div>
+       <Helmet>
+            <title>Amazon | Customer Review</title>
+          </Helmet>
       <h1 className="text-4xl text-black text-center font-semibold my-16">
         Customer <span className="text-orange-400">Review</span>
       </h1>

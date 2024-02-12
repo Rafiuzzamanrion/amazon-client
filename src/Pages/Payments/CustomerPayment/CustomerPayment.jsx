@@ -13,7 +13,7 @@ const CustomerPayment = () => {
     const {data:customerPayments = []} = useQuery({
         queryKey: ['loadSpecificCustomerPayment'],
         queryFn: async () => {
-            const res = await axios.get(`http://localhost:5000/loadSpecificCustomerPayment?email=${user?.email}`);
+            const res = await axios.get(`https://amazon-server-delta.vercel.app/loadSpecificCustomerPayment?email=${user?.email}`);
             return res.data;
         }  
     });

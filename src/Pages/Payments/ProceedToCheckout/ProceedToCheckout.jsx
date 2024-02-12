@@ -33,13 +33,13 @@ const ProceedToCheckout = () => {
           });
     }
 
-    axios.post('http://localhost:5000/postPayment',formData)
+    axios.post('https://amazon-server-delta.vercel.app/postPayment',formData)
     .then(res => {
       window.location.replace(res.data.url)
         console.log(res.data)
     });
    
-    axios.delete(`http://localhost:5000/deleteCarts?email=${user?.email}`)
+    axios.delete(`https://amazon-server-delta.vercel.app/deleteCarts?email=${user?.email}`)
     .then(res => {
       console.log(res.data);
     })

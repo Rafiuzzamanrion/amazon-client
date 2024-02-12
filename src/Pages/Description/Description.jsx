@@ -1,6 +1,6 @@
 import axios from "axios";
 import {useContext} from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import {AuthContext} from "../../Providers/AuthProviders";
 import UseCart from "../../Hooks/UseCart";
@@ -16,6 +16,7 @@ const Description = () => {
     product;
     const {user} = useContext(AuthContext);
     const [,refetch] = UseCart();
+    const navigate = useNavigate();
   
   const handleAddToCart = (event) => {
     event.preventDefault();
@@ -23,6 +24,16 @@ const Description = () => {
     const size = form.size.value;
     const color = form.color.value;
     const quantity = form.quantity.value;
+    if(!user) {
+      Swal.fire({
+        icon: "warning",
+        title: "Please Login",
+        text: "Login first to order products !!",
+      });
+    }
+    if(!user){
+      return navigate('/login')
+    }
 
     if (size === "Size" || color === "Color" || quantity === "Quantity") {
       return Swal.fire({
@@ -37,7 +48,7 @@ const Description = () => {
   
     const cartData = {name:name,email:user?.email, price:totalPrice, quantity:parseInt(quantity), image:img,color:color,size:size, category:category, brand:seller, shippingCharge:shipping ,productId:_id}
 
-    axios.post('http://localhost:5000/cart',cartData)
+    axios.post('https://amazon-server-delta.vercel.app/cart',cartData)
     .then(res => {
       if(res.data.insertedId){
         refetch()

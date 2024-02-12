@@ -11,7 +11,7 @@ const UseAdmin = () => {
         queryKey:['isAdmin',user?.email],
         enabled:!loading ,
         queryFn: async ()=> {
-            const res = await axios.get(`http://localhost:5000/isAdmin?email=${user?.email}`);
+            const res = await axios.get(`https://amazon-server-delta.vercel.app/isAdmin?email=${user?.email}`);
             return res.data;
         }
     })

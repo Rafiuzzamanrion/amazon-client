@@ -1,9 +1,12 @@
+import {Helmet} from "react-helmet-async";
 
 
 const ContactUs = () => {
     return (
         <div>
-           
+           <Helmet>
+            <title> Amazon | Contact us</title>
+           </Helmet>
 <div className="container my-24 mx-auto md:px-6">
 
   <section className="mb-32">

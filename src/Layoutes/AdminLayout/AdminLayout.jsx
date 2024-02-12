@@ -64,7 +64,7 @@ const AdminLayout = () => {
             <Link className="hover:scale-110 hover:ease-in hover:duration-150"  to={'/CustomerReview'}><MdRateReview size={20}/> Customer Review</Link>
            </li>
            <li>
-            <Link className="hover:scale-110 hover:ease-in hover:duration-150"  to={'/'}><MdContactMail size={20}/> Contact Us</Link>
+            <Link to={'/contact'} className="hover:scale-110 hover:ease-in hover:duration-150"><MdContactMail size={20}/> Contact Us</Link>
            </li>
           </ul>
         </div>

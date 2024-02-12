@@ -137,8 +137,8 @@ import ContactUs from "../Pages/Home-Layout/Contacts/ContactUs";
        children:[
         {
           path:':id',
-          element:<PrivateRoutes><Description></Description></PrivateRoutes>,
-          loader:({params})=> fetch(`http://localhost:5000/description/${params.id}`)
+          element:<Description></Description>,
+          loader:({params})=> fetch(`https://amazon-server-delta.vercel.app/description/${params.id}`)
         }
        ]
       
