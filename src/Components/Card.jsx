@@ -21,7 +21,7 @@ const Card = ({item}) => {
     return (
         <div>
           
-            <div className="card w-96 h-[570px] bg-base-100 shadow-xl border border-orange-400" data-aos="zoom-in"data-aos-easing="linear"
+            <div className="card md:96 h-[570px] bg-base-100 shadow-xl border border-orange-400" data-aos="zoom-in"data-aos-easing="linear"
     data-aos-duration="500">
   <figure className="px-5 pt-5">
     <img src={img} alt="Shoes" className="rounded-xl object-cover h-full hover:scale-110 hover:ease-in hover:duration-200" />
